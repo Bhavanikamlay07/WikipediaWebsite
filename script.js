@@ -53,7 +53,9 @@ function searchWikipedia(event) {
     searchResultsEl.textContent = "";
 
     let searchInput = searchInputEl.value;
-    let url = "https://apis.ccbp.in/wiki-search?search=" + searchInput;
+    //let url = "https://apis.ccbp.in/wiki-search?search=" + searchInput;
+    const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchInput}&format=json&origin=*`;
+
     let options = {
       method: "GET"
     };
